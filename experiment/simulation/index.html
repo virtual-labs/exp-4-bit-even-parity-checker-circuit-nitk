@@ -1,13 +1,77 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="js/demo_script.js"></script>
 </head>
-<body>
-		<!-- Your code goes here-->
+    
+<title>Simulation</title>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+<div class="topnav">
+    <a href="references.html">References</a>
+    <a href="posttest.html">Posttest</a>
+    <a style="color: rgb(238, 106, 30);" href="#">Simulation</a>
+    <a href="procedure.html">Procedure</a>
+    <a href="pretest.html">Pretest</a>
+    <a href="theory.html">Theory</a>
+    <a href="../index.html">Aim</a>
+</div>
+
+<p>
+<h1 style="text-align: center; font-size: xx-large;">4-Bit Even Parity Checker <br> Simulator</h1><br>
+
+<img id='circuit' src="images/circuit.jpg" style="position:absolute; width:950px; top:200px; left:200px" width="300" height="300"> 
+
+<p style="position: absolute; left:1030px; width:100px; top: 385px; font-size: medium;"><b>Truth Table</b></p>
+<img id='truthTable' src="images/truthTable.jpg" style="position:absolute; width:340px; top:420px; left:900px" width="340" height="290"> 
+
+
+<p style="position:absolute; width:30px; top:235px; left:145px; font-size: medium;">x</p>
+<img id='switchx' src="images/switchoff.jpg" style="position:absolute; width:30px; top:235px; left:175px" width="70" height="40" onclick = "changeSwitchImageX()">
+<img id='inputx' src="images/switchoff.jpg" style="position:absolute; width:30px; top:235px; left:175px" width="70" height="40" onclick = "changeSwitchImageX()">
+<input type='button' id='faultx' value="No fault" style="position:absolute; width:85px; top:225px; left:220px" onclick=changeFaultX()>
+<br>
+
+<p style="position:absolute; width:30px; top:295px; left:145px; font-size: medium;">y</p>
+<img id='switchy' src="images/switchoff.jpg" style="position:absolute; width:30px; top:295px; left:175px" width="70" height="40" onclick = "changeSwitchImageY()"> 
+<img id='inputy' src="images/switchoff.jpg" style="position:absolute; width:30px; top:295px; left:175px" width="70" height="40" onclick = "changeSwitchImageY()"> 
+<input type='button' id='faulty' value="No fault" style="position:absolute; width:80px; top:285px; left:220px" onclick=changeFaultY()>
+<br>
+
+<p style="position:absolute; width:30px; top:385px; left:145px; font-size: medium;">z</p>
+<img id='switchz' src="images/switchoff.jpg" style="position:absolute; width:30px; top:385px; left:175px" width="70" height="40" onclick = "changeSwitchImageZ()">
+<img id='inputz' src="images/switchoff.jpg" style="position:absolute; width:30px; top:385px; left:175px" width="70" height="40" onclick = "changeSwitchImageZ()">
+<input type='button' id='faultz' value="No fault" style="position:absolute; width:80px; top:375px; left:220px" onclick=changeFaultZ()>
+<br>
+
+<p style="position:absolute; width:30px; top:445px; left:145px; font-size: medium;">P</p>
+<img id='switchp' src="images/switchoff.jpg" style="position:absolute; width:30px; top:445px; left:175px" width="70" height="40" onclick="changeImageP()"> 
+<img id='inputp' src="images/switchoff.jpg" style="position:absolute; width:30px; top:445px; left:175px" width="70" height="40" onclick="changeImageP()"> 
+<input type='button' id='faultp' value="No fault" style="position:absolute; width:80px; top:435px; left:220px" onclick="changeFaultP()">
+
+<input type='button' id='faultxor1' value="No fault" style="position:absolute; width:80px; top:255px; left:535px" onclick="changeFaultXor1()">
+<input type='button' id='faultxor2' value="No fault" style="position:absolute; width:80px; top:440px; left:535px" onclick="changeFaultXor2()">
+
+<img id='outputC' src="images/ledoff.jpg" style="position:absolute; width:30px; top:335px; left:1135px" width="70" height="40">
+<input type='button' id='faultc' value="No fault" style="position:absolute; width:80px; top:330px; left:960px" onclick="changeFaultC()">
+
+<input type='button' id='run' value="Run" style="position:absolute; width:80px; top:530px; left:450px;" onclick="addToTable()">
+<input type='button' id='reset' value="Reset" style="position:absolute; width:80px; top:530px; left:550px;" onclick="resetTable()">
+
+<p style="padding-bottom: 10px;">
+<table id="output" style="position:absolute; width: 480px; top:555px; left:300px; font-size: medium;">
+    <thead>
+    <tr style="text-align: center; background-color: #D7E5F0;">
+      <th style="width:50px;">x</th>
+      <th style="width:50px;">y</th>
+      <th style="width:50px;">z</th>
+      <th style="width:50px;">P</th>
+      <th style="width:140px">Current Output, C</th>
+      <th style="width:140px">Ideal Output</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</p>
+</p>
 </html>

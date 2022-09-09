@@ -1,39 +1,60 @@
 {
-  "version": 2.0,
+	"version": 2.0,
   "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+	{
+		"question": "What is the expression for the Parity Error Check?",
+		"answers": {
+			"a": "x ⊕ y ⊕ z ⊕ P",
+			"b": "x. y . z . P",
+			"c": "x ⊕ y ⊕ z",
+			"d": "x + y + z + P"
+		},
+		"correctAnswer": "a",
+		"difficulty": "advanced"
+	},
+	{
+		"question": "When an error is present, the Parity Error Check evaluates to: ",
+		"answers": {
+			"a": "0",
+			"b": "1",
+			"c": "2",
+			"d": "3"
+		},
+		"correctAnswer": "b",
+		"difficulty": "beginner"
+	},
+	{
+		"question": "The BCD number 1011010 has ___ parity:",
+		"answers": {
+			"a": "Undefined",
+			"b": "Both even and odd",
+			"c": "Even",
+			"d": "Odd"
+		},
+		"correctAnswer": "c",
+		"difficulty": "intermediate"
+	},
+	{
+		"question": "Which gate is best suited for checking parity bits?",
+		"answers": {
+			"a": "AND",
+			"b": "OR",
+			"c": "XNOR",
+			"d": "XOR"
+		},
+		"correctAnswer": "d",
+		"difficulty": "beginner"
+	},
+	{
+		"question": "Parity bit check is used for: ",
+		"answers": {
+			"a": "Error correction",
+			"b": "Error detection",
+			"c": "Error detection and correction",
+			"d": "None of the above"
+		},
+		"correctAnswer": "b",
+		"difficulty": "intermediate"
+	}
+]
 }
