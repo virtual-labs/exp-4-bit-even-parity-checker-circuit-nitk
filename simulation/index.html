@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLVE</title>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.7.0.min.js" 
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+    <title>Virtual Lab</title>
+    <script src='https://cdn.plot.ly/plotly-2.18.2.min.js'></script>
+
+  </head>
+  <body>
+    <div class="container">
+    <div class="title-div-container">
+      <div class="title-div">
+          <div class="logo-div">
+            <a href="#"><img src="images/logo_nitk.png" alt="Logo" class="logo" /></a>
+          </div>
+          <h1>4-Bit Even Parity Checker Simulator
+          </h1>
+        </div>
+      </div>
+      <div class="sidebar">
+        <ul class="tool-menu">
+
+          
+          <li class="tool-list tool-practice" >
+            <a class="tool-link" title="Experiment"
+              ><img src="./images/solution.png" alt="solution" class="icons"
+              ></a
+              >
+              <span>Simulation</span>
+          </li>
+
+          
+          <li class="tool-list tool-practice" onclick="addToTable()">
+            <a class="tool-link" title="Run"
+              ><img src="./images/run.png" alt="solution" class="icons"
+              ></a
+              >
+              <span>Run</span>
+          </li>
+
+          <li class="tool-list tool-help" onclick="displayDiv(this)">
+            <a class="tool-link" title="Help" onclick="Refresh()"
+              ><img src="./images/bluecwdull.svg" alt="Help" class="icons"
+              ></a
+              >
+              <span>Reset</span>
+          </li>
+          
+        </ul>
+      </div> 
+      <div class="main">
+        <div class="main-section">
+          <div id="simulation" class="main__task-div">
+            <h3 class="task-title">Simulation</h3>
+           
+            <div class="canvas__div">
+              <div class="task-screen apparatus hide">
+              </div>
+              <div class="task-screen practice">
+                  <span id="Rfvalue" style="display:none ;"></span>
+                  <div class="grid-container">
+                    <div class="div1">
+                    <img id="ciruit" src="images/circuit.jpg" alt="Image 1">
+
+
+                <p class="switch1-txt">x</p>
+                
+<img id='switchx' class="switch" src="images/switchoff.jpg" onclick = "changeSwitchImageX()">
+<img id='inputx'  class="switch" src="images/switchoff.jpg" onclick = "changeSwitchImageX()">
+<input type='button' class="switch" id='faultx' value="No fault" onclick=changeFaultX()>
+<br>
+  
+<p class="switch2-txt">y</p>
+<img id='switchy' class="switch" src="images/switchoff.jpg" onclick = "changeSwitchImageY()"> 
+<img id='inputy' class="switch" src="images/switchoff.jpg"  onclick = "changeSwitchImageY()"> 
+<input type='button' id='faulty' class="switch" value="No fault"  onclick=changeFaultY()>
+<br>
+
+<p class="switch3-txt" >z</p>
+<img id='switchz' class="switch" src="images/switchoff.jpg"  onclick = "changeSwitchImageZ()">
+<img id='inputz' class="switch" src="images/switchoff.jpg"  onclick = "changeSwitchImageZ()">
+<input type='button' id='faultz' class="switch" value="No fault"  onclick=changeFaultZ()>
+<br>
+
+<p class="switch4-txt" >P</p>
+<img id='switchp' class="switch" src="images/switchoff.jpg"  onclick="changeImageP()"> 
+<img id='inputp' class="switch" src="images/switchoff.jpg"  onclick="changeImageP()"> 
+<input type='button' id='faultp' class="switch" value="No fault" onclick="changeFaultP()">
+
+<input type='button' id='faultxor1' class="switch" value="No fault" onclick="changeFaultXor1()">
+<input type='button' id='faultxor2' class="switch" value="No fault"  onclick="changeFaultXor2()">
+
+<img id='outputC' class="switch" src="images/ledoff.jpg" >
+<input type='button' id='faultc' class="switch" value="No fault" style="" onclick="changeFaultC()">
+
+                  </div>
+                  <div class="div2">
+                    <table class="truth-table">
+                      <thead>
+                        <tr>
+                          <th colspan="4">4-bit received message</th>
+                          <th rowspan="2">Parity error check C<sub>p</sub></th>
+                        </tr>
+                        <tr>
+                          <th class="truth-th">X</th>
+                          <th class="truth-th">Y</th>
+                          <th class="truth-th">Z</th>
+                          <th class="truth-th">P</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">0</td>
+                          <td class="truth-td">0</td>
+                        </tr>
+                        <tr>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                          <td class="truth-td">1</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+        <div class="simulator-table container1">
+       
+        <table id="output">
+          <thead>
+          <tr style="text-align: center;">
+            <th style="width:50px;">x</th>
+            <th style="width:50px;">y</th>
+            <th style="width:50px;">z</th>
+            <th style="width:50px;">P</th>
+            <th style="width:140px">Current Output, C</th>
+            <th style="width:140px">Ideal Output</th>
+          </tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+        </div>
+        </div>
+          </div>
+          </div>
+         
+          <div class="main__task-div footer">
+            <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
+          </div>
+        </div>
+    </div>
+    <script defer src="js/script.js"></script>
+  <script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+	{
+		"question": "What is the expression for the Parity Error Check?",
+		"answers": {
+			"a": "x ⊕ y ⊕ z ⊕ P",
+			"b": "x. y . z . P",
+			"c": "x ⊕ y ⊕ z",
+			"d": "x + y + z + P"
+		},
+		"explanations": {
+		        "a": "Parity error checking uses XOR (⊕) to detect if the number of 1s, including the parity bit, is even or odd. The expression x ⊕ y ⊕ z ⊕ P correctly verifies this condition.",
+		        "b": "",
+		        "c": "",
+		        "d": ""
+		},
+		"correctAnswer": "a",
+		"difficulty": "advanced"
+		},
+		{
+		"question": "When an error is present, the Parity Error Check evaluates to: ",
+		"answers": {
+			"a": "0",
+			"b": "1",
+			"c": "2",
+			"d": "3"
+		},
+		"explanations": {
+		        "a": "",
+		        "b": "When an error occurs, the XOR of all data bits and the parity bit becomes 1, indicating a parity mismatch. A result of 1 signals the presence of an error.",
+		        "c": "",
+		        "d": ""
+		},
+		"correctAnswer": "b",
+		"difficulty": "beginner"
+		},
+		{
+		"question": "The BCD number 1011010 has _____________ parity.",
+		"answers": {
+			"a": "Undefined",
+			"b": "Both even and odd",
+			"c": "Even",
+			"d": "Odd"
+		},
+		"explanations": {
+		        "a": "",
+		        "b": "",
+		        "c": "The BCD number 1011010 contains 4 ones, which is an even count. Therefore, it has even parity.",
+		        "d": ""
+		},
+		"correctAnswer": "c",
+		"difficulty": "intermediate"
+		},
+		{
+		"question": "Which gate is best suited for checking parity bits?",
+		"answers": {
+			"a": "AND",
+			"b": "OR",
+			"c": "XNOR",
+			"d": "XOR"
+		},
+		"explanations": {
+		        "a": "",
+		        "b": "",
+		        "c": "",
+		        "d": "XOR gates are ideal for parity checking because they output 1 when there’s an odd number of 1s, which helps detect parity mismatches. This makes XOR perfect for error detection."
+		},
+		"correctAnswer": "d",
+		"difficulty": "beginner"
+		},
+		{
+		"question": "Parity bit check is used for ",
+		"answers": {
+			"a": "Error correction",
+			"b": "Error detection",
+			"c": "Error detection and correction",
+			"d": "None of the above"
+		},
+		"explanations": {
+		        "a": "",
+		        "b": "Parity bit check helps in identifying if an error has occurred during data transmission but cannot locate or correct the error. It's a simple method for error detection only.",
+		        "c": "",
+		        "d": ""
+		},
+		"correctAnswer": "b",
+		"difficulty": "intermediate"
+	}
+]
+}
