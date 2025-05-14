@@ -7,7 +7,7 @@
 
 <center>
 
-<img style="width: 650px;" src="images/circuitdiagram.jpg">
+<img style="width: 50%" src="images/circuitdiagram.jpg">
 
 Fig.1: Logic diagram of a 4-bit even parity checker.
 
