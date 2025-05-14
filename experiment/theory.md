@@ -1,6 +1,6 @@
 ### INTRODUCTION
 
-One of the most widely used error detection techniques for transmission of data for sharing information between devices is <i>**Parity checking.**</i>
+One of the most widely used error detection techniques for transmission of data for sharing information between devices is <em>**Parity checking.**</em>
 The Parity Checker matches the number of 1s at the receiver's end with that of the transmitter's end to check for errors. If there is a change in the number of 1s at the receiving end, then that detects the presence of an error. Since the data is transmitted with even parity, there must be an even number of 1s.  
 
 **4-Bit EVEN Parity Checker**  
