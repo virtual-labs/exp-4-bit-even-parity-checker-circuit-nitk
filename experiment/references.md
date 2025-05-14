@@ -1,4 +1,4 @@
-### References:
+### References
 
 1. M. Morris Mano, Michael D Ciletti, "Digital Design", Pearson, 5th ed.
 2. Digital Design with an Introduction to the Verilog HDL, VHDL, and SystemVerilog, M. Morris Mano and Michael D. Ciletti, Pearson Education, 6th Edn., 2018.
