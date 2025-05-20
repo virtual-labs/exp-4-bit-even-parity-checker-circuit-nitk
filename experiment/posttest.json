@@ -1,39 +1,82 @@
 {
   "version": 2.0,
   "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+	{
+		"question": "Parity check can usually detect ________________ . ",
+		"answers": {
+			"a": "8 bit error",
+			"b": "4 bit error",
+			"c": "2 bit error",
+			"d": "1 bit error"
+		},
+		"explanations": {
+		        "a": "",
+		        "b": "",
+		        "c": "",
+		        "d": "Parity check can detect any single-bit error by identifying a change in the expected parity, but it cannot reliably detect multi-bit errors."
+		},
+		"correctAnswer": "d",
+		"difficulty": "advanced"
+	},
+	{
+		"question": "Which method of error detection uses only 1 redundant bit per unit of data?",
+		"answers": {
+			"a": "Checksum",
+			"b": "Simple parity check",
+			"c": "Two-dimensional parity check",
+			"d": "Cyclic Redundancy Check"
+		},
+		"explanations": {
+		        "a": "",
+		        "b": "Simple parity check adds only one redundant bit (parity bit) to each data unit to detect errors. It's the most basic form of error detection",
+		        "c": "",
+		        "d": ""
+		},
+		"correctAnswer": "b",
+		"difficulty": "beginner"
+	},
+	{
+		"question": "The BCD number 1101111 has __________ parity ",
+		"answers": {
+			"a": "Even",
+			"b": "Odd",
+			"c": "Both even and odd",
+			"d": "Undefined"
+		},
+		"explanations": {
+		        "a": "The BCD number 1101111 contains 6 ones, which is an even number. Therefore, it has even parity. ",
+		        "b": "",
+		        "c": "",
+		        "d": ""
+		},
+		"correctAnswer": "a",
+		"difficulty": "beginner"
+	},
+	{
+		"question": "Applying an exhaustive list of tests on a model is very time-consuming. True or False?",
+		"answers": {
+			"a": "True",
+			"b": "False"
+		},
+		"explanations": {
+		        "a": "Applying an exhaustive list of tests on a model is time-consuming because it requires evaluating all possible test cases, which can be computationally expensive and inefficient.",
+		        "b": ""
+		},
+		"correctAnswer": "a",
+		"difficulty": "intermediate"
+	},
+	{
+		"question": "Parity codes cannot be used to detect transmission errors in external data buses.",
+		"answers": {
+			"a": "True",
+			"b": "False"
+		},
+		"explanations": {
+		        "a": "",
+		        "b": "Parity codes can be used to detect transmission errors in external data buses, as they help identify errors by checking the parity (odd or even) of the transmitted data."
+		},
+		"correctAnswer": "b",
+		"difficulty": "intermediate"
+}
+]
 }
